@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+
+<head>
+  <script type="text/javascript">
+    function LoadPage() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const url = encodeURI(urlParams.get('url'));
+      document.getElementById('diagram').src = url;
+    }
+  </script>
+</head>
+  
+<frameset rows="100%,*" onload="LoadPage();">
+  <frame id="diagram" src="#" />
+</frameset>
+
+</html>
