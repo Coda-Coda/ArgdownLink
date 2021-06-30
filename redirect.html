@@ -4,8 +4,7 @@
 <head>
   <script type="text/javascript">
     function LoadPage() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const url = encodeURI(urlParams.get('url'));
+      const url = window.location.search.slice(5);
       document.getElementById('diagram').src = url;
     }
   </script>
